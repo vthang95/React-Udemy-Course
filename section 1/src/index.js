@@ -12,7 +12,7 @@ const API_KEY = 'AIzaSyBy2dyp4D9Hq9EXJn1uLsU6FRZRnveds5E';
 class App extends Component {
   constructor(props) {
     super(props);
-    
+
     this.state = {
       videos: [],
       selectedVideo: null
@@ -21,7 +21,6 @@ class App extends Component {
   }
 
   videoSearch(term) {
-    console.log(term)
     YTSearch({ key: API_KEY, term: term }, videos => {
       this.setState({
         videos: videos,
